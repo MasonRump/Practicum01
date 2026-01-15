@@ -34,7 +34,7 @@ public class PersonGenerator {
         Path file = Path.of(filename);
 
 
-        try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new BufferedOutputStream(Files.newOutputStream(File))))) {
+        try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new BufferedOutputStream(Files.newOutputStream(file))))) {
             for (String rec : people) {
                 writer.write(rec);
                 writer.newLine();

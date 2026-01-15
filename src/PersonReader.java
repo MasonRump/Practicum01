@@ -23,24 +23,26 @@ public class PersonReader {
                     lines.add(reader.readLine());
                 }
 
-                System.out.println("%-8s %-15s %-15s %-6s %-5s%n", "ID#", "First Name", "Last Name", "Title", "YOB");
-                System.out.println( == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==)
+                System.out.printf("%-8s %-15s %-15s %-6s %-5s%n", "ID#", "Firstname", "Lastname", "Title", "YOB");
+                System.out.println("==============================================================")
                 ;
 
 
                 for (String line : lines) {
                     String[] f = line.split(",");
+                    if (f.length == 5) {
                     System.out.printf("%-8s %-15s %-15s %-6s %-5s%n"
                             , f[0].trim(), f[1].trim(), f[2].trim(), f[3].trim(), f[4].trim());
-                } else{
-                    System.out.println("Error record: " + line);
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+                } else {
+                    System.out.println("Error record: " + line); } }
 
-        } else {
+                    } catch (Exception e)
+                        { e.printStackTrace(); }
+
+                } else {
             System.out.println("No file selected");
+
+            }
         }
     }
-}
+
